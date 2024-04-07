@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Global\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Elasticsearch.Core\Elasticsearch.Core.csproj" />
+    <ProjectReference Include="..\Elasticsearch.Infrastructure\Elasticsearch.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
