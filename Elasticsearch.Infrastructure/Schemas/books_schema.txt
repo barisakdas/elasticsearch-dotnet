@@ -1,0 +1,30 @@
+PUT books
+{
+  "mappings": {
+    "properties": {
+      "title":{
+        "type": "text", 
+        "fields": {
+          "keyword":{
+            "type":"keyword"
+          }
+        }
+      },
+      "absract":{
+        "type": "text"
+      },
+      "stock":{
+        "type": "double"
+      },
+      "price":{
+        "type": "double"
+      },
+      "publishdate":{
+        "type": "date"
+      },
+      "categories":{
+        "type": "keyword"
+      }
+    }
+  }
+}

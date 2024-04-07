@@ -1,6 +1,4 @@
-﻿using Elastic.Clients.Elasticsearch;
-
-namespace Elasticsearch.Application.Services;
+﻿namespace Elasticsearch.Application.Services;
 
 public class BookService : IBookService
 {
@@ -46,15 +44,15 @@ public class BookService : IBookService
     }
 
     /// <summary>Veri tabanında aktif olarak bulunan ve ilgili isme ait veriyi getiren sağlayan metot.</summary>
-    public async Task<BaseResult<List<BookDto>>> GetByNameAsync(string name)
+    public async Task<BaseResult<List<BookDto>>> GetByTitleAsync(string title)
     {
         // İlk olarak dışarıdan gelen modelin boş olup olmadığına bakıyoruz.
         // Böylece gelen model boşşsa herhangi bir işlem yapmadan hızlıca metodu kırabiliriz.
-        if (string.IsNullOrWhiteSpace(name))
+        if (string.IsNullOrWhiteSpace(title))
             return new BadRequestResult<List<BookDto>>("Gelen id boş geçilemez!");
 
         // Elasticsearch üzerindeki veriyi alıyoruz.
-        var (result, message) = await _repository.TermQueryAsync(IndexName, "name", name);
+        var (result, message) = await _repository.TermQueryAsync(IndexName, "title", title);
 
         if (result is null)
             return new NoContentResult<List<BookDto>>($"Veri alınamadı. Mesaj: {message}");
@@ -65,15 +63,15 @@ public class BookService : IBookService
     }
 
     /// <summary>Veri tabanında aktif olarak bulunan ve ilgili isimlere ait veriyi getiren sağlayan metot.</summary>
-    public async Task<BaseResult<List<BookDto>>> GetByNameListAsync(List<string> names)
+    public async Task<BaseResult<List<BookDto>>> GetByTitleListAsync(List<string> titles)
     {
         // İlk olarak dışarıdan gelen modelin boş olup olmadığına bakıyoruz.
         // Böylece gelen model boşşsa herhangi bir işlem yapmadan hızlıca metodu kırabiliriz.
-        if (names is null)
+        if (titles is null)
             return new BadRequestResult<List<BookDto>>("Gelen id boş geçilemez!");
 
         // Elasticsearch üzerindeki veriyi alıyoruz.
-        var (result, message) = await _repository.TermsQueryAsync(IndexName, "name", names);
+        var (result, message) = await _repository.TermsQueryAsync(IndexName, "name", titles);
 
         if (result is null)
             return new NoContentResult<List<BookDto>>($"Veri alınamadı. Mesaj: {message}");

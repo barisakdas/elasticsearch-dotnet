@@ -9,10 +9,10 @@ public interface IBookService
     Task<BaseResult<BookDto>> GetByIdAsync(string id);
 
     /// <summary>Veri tabanında aktif olarak bulunan ve ilgili isme ait veriyi getiren sağlayan metot.</summary>
-    Task<BaseResult<List<BookDto>>> GetByNameAsync(string name);
+    Task<BaseResult<List<BookDto>>> GetByTitleAsync(string title);
 
     /// <summary>Veri tabanında aktif olarak bulunan ve ilgili isimlere ait veriyi getiren sağlayan metot.</summary>
-    Task<BaseResult<List<BookDto>>> GetByNameListAsync(List<string> names);
+    Task<BaseResult<List<BookDto>>> GetByTitleListAsync(List<string> titles);
 
     /// <summary>Veri tabanında aktif olarak bulunan ve ilgili basım tarihine ait veriyi getiren sağlayan metot.</summary>
     Task<BaseResult<List<BookDto>>> GetByPublishDateAsync(DateTime publishDate);

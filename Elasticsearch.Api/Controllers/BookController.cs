@@ -34,20 +34,20 @@ public class BookController : ControllerBase
     }
 
     [HttpGet("getbyname")]
-    public async Task<IActionResult> GetByNameAsync(string name)
+    public async Task<IActionResult> GetByTitleAsync(string title)
     {
         // Servis üzerinden veriyi alıyoruz. Alınan bu veri bize Result<T> şeklinde döneceği için bunun yapılandırmasına ihtiyacımız var.
-        var result = await _service.GetByNameAsync(name);
+        var result = await _service.GetByTitleAsync(title);
 
         // Gelen verideki Result yapısının durumunu kontrol ederek ve ona uygun geri dönüş tipini (IActionResult) seçerek işlemi sonlandırıyoruz.
         return this.FromResult(result);
     }
 
     [HttpPost("getbynamelist")]
-    public async Task<IActionResult> GetByNameListAsync(List<string> names)
+    public async Task<IActionResult> GetByTitleListAsync(List<string> titles)
     {
         // Servis üzerinden veriyi alıyoruz. Alınan bu veri bize Result<T> şeklinde döneceği için bunun yapılandırmasına ihtiyacımız var.
-        var result = await _service.GetByNameListAsync(names);
+        var result = await _service.GetByTitleListAsync(titles);
 
         // Gelen verideki Result yapısının durumunu kontrol ederek ve ona uygun geri dönüş tipini (IActionResult) seçerek işlemi sonlandırıyoruz.
         return this.FromResult(result);

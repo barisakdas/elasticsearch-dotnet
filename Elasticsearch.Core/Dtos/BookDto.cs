@@ -2,7 +2,7 @@
 
 public record BookDto : BaseDto
 {
-    public string Name { get; set; } = null!;
+    public string Title { get; set; } = null!;
     public string Abstract { get; set; } = null!;
     public decimal Price { get; set; }
     public uint Stock { get; set; }

@@ -2,8 +2,8 @@
 
 public class Book : BaseEntity
 {
-    [JsonPropertyName("name")]
-    public string Name { get; set; } = null!;
+    [JsonPropertyName("title")]
+    public string Title { get; set; } = null!;
 
     [JsonPropertyName("abstract")]
     public string Abstract { get; set; } = null!;
@@ -27,9 +27,9 @@ public class Book : BaseEntity
     public Author Author { get; set; } = null!;
 
     /// <summary>İstenilen değererli alan ve kalanını kullanmayan bir genel yapıcı metot.</summary>
-    public Book(string name, string @abstract, decimal price, uint stock)
+    public Book(string title, string @abstract, decimal price, uint stock)
     {
-        Name = name;
+        Title = title;
         Abstract = @abstract;
         Price = price;
         Stock = stock;

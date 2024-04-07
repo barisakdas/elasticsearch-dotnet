@@ -1,0 +1,26 @@
+PUT authors
+{
+  "mappings": {
+    "properties": {
+      "firstname":{
+        "type": "text", 
+        "fields": {
+          "keyword":{
+            "type":"keyword"
+          }
+        }
+      },
+      "lastname":{
+        "type": "text", 
+        "fields": {
+          "keyword":{
+            "type":"keyword"
+          }
+        }
+      },
+      "birthdate":{
+        "type": "date"
+      }
+    }
+  }
+}

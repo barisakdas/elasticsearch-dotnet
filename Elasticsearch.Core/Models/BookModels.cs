@@ -3,7 +3,7 @@
 /// <summary>Dışarıdan bir entity oluşturulacağı zaman gönderilmesini istediğimiz zorunlu alanları içeren modeli oluşturuyoruz.</summary>
 public record CreateBookModel
 {
-    public string Name { get; set; } = null!;
+    public string Title { get; set; } = null!;
     public string Abstract { get; set; } = null!;
     public decimal Price { get; set; }
     public uint Stock { get; set; }
@@ -15,7 +15,7 @@ public record CreateBookModel
 public record UpdateBookModel
 {
     public string Id { get; set; } = null!;
-    public string Name { get; set; } = null!;
+    public string Title { get; set; } = null!;
     public string Abstract { get; set; } = null!;
     public decimal Price { get; set; }
     public uint Stock { get; set; }
