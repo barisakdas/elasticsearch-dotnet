@@ -1,0 +1,21 @@
+﻿Birden Fazla Kategoriye Ait Makaleleri Arama ve En Yeni Yayın Tarihine Göre Sıralama:
+
+GET /articles/_search
+{
+  "query": {
+    "bool": {
+      "must": {
+        "terms": {
+          "categories.keyword": ["Biyoloji", "Tıp", "Mühendislik"]
+        }
+      }
+    }
+  },
+  "sort": [
+    {
+      "publishdate": {
+        "order": "desc"
+      }
+    }
+  ]
+}

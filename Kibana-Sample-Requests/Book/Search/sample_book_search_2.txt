@@ -1,0 +1,29 @@
+﻿Birden Fazla Yazarın İsimlerine Göre Makaleleri Arama ve Belirli Bir Fiyat Aralığında Filtreleme:
+
+GET /articles/_search
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "author.firstname": "Ahmet"
+          }
+        },
+        {
+          "match": {
+            "author.firstname": "Merve"
+          }
+        }
+      ],
+      "filter": {
+        "range": {
+          "price": {
+            "gte": 20,
+            "lte": 50
+          }
+        }
+      }
+    }
+  }
+}

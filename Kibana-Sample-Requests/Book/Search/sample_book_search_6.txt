@@ -1,0 +1,21 @@
+﻿Belirli Bir Kelimeyi İçeren ve Belirli Bir Stok Miktarından Fazla Olan Makaleleri Arama:
+
+GET /articles/_search
+{
+  "query": {
+    "bool": {
+      "must": {
+        "match": {
+          "abstract": "robotik"
+        }
+      },
+      "filter": {
+        "range": {
+          "stock": {
+            "gt": 50
+          }
+        }
+      }
+    }
+  }
+}

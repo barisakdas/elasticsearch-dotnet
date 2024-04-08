@@ -1,0 +1,13 @@
+POST /books/_doc/3
+{
+  "title": "Kuantum Bilgisayarlar",
+  "abstract": "Kuantum bilgisayarlar, bilgisayar biliminin sınırlarını zorlamaktadır. Bu eser, kuantum bilgisayarların prensiplerini, mevcut gelişmelerini ve bu teknolojinin geleceğini tartışır. Kuantum mekaniğinin paradoksal ve karşı sezgisel prensipleri üzerine kurulu olan bu cihazlar, bilgi işleme kapasitesinde devrim yaratma potansiyeline sahiptir. Kuantum bitleri veya qubitler kullanarak, kuantum bilgisayarlar çoklu durumları aynı anda temsil edebilir ve böylece paralel hesaplamaları mümkün kılar. Bu kitapta, kuantum hesaplamanın temelleri, kuantum algoritmaları, kuantum kriptografisi ve kuantum entanglement gibi konular ele alınmaktadır. Ayrıca, kuantum bilgisayarların gelecekteki uygulamaları, özellikle ilaç keşfi, malzeme bilimi ve yapay zeka alanlarında nasıl devrim yaratabileceği incelenmektedir. Okuyucular, kuantum bilgisayarların mevcut prototipleri, dünya çapında devam eden araştırmalar ve bu teknolojinin ticarileşme yolculuğu hakkında bilgi sahibi olacaklar. Kitap, kuantum bilgisayarların karşılaştığı teknik zorlukları ve bu zorlukların nasıl üstesinden gelinmeye çalışıldığını da detaylı bir şekilde anlatmaktadır. Son olarak, kuantum bilgisayarların sosyal ve etik etkileri üzerine düşünceler sunarak, bu heyecan verici teknolojinin insanlık için ne anlama geldiğini sorgulamaktadır.",
+  "price": 40.00,
+  "stock": 85,
+  "publishdate": "2024-03-10",
+  "categories": ["Fizik", "Bilgisayar Bilimi"],
+  "author": {
+    "firstname": "Kemal",
+    "lastname": "Yıldırım"
+  }
+}

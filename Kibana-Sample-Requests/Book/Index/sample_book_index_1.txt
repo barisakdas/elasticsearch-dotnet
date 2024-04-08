@@ -1,0 +1,13 @@
+﻿POST /books/_doc/1
+{
+  "title": "Yapay Zeka ve Geleceği",
+  "abstract": "Bu kitap, yapay zekanın temellerini, tarihçesini ve gelecekteki potansiyelini derinlemesine inceler. Yapay zeka teknolojilerinin nasıl geliştiğini, günümüzdeki uygulamalarını ve gelecekte insan hayatını nasıl etkileyeceğini detaylı bir şekilde anlatır. Yapay zeka, algoritmaların ve veri işlemenin sınırlarını zorlayarak, öğrenme, algılama ve karar verme yeteneklerini makineler aracılığıyla gerçekleştirmeyi amaçlar. Bu kitapta, yapay zekanın farklı disiplinlerle olan ilişkisi, etik konular, ve toplumsal etkileri üzerinde durulur. Ayrıca, yapay zekanın sağlık, eğitim, sanayi, ve finans gibi çeşitli sektörlerde nasıl devrim yarattığı ve bu teknolojilerin gelecekteki iş ve yaşam biçimlerimizi nasıl dönüştürebileceği tartışılır. Yapay zekanın gelişimi, tarihsel bir perspektiften ele alınarak, geçmişten günümüze önemli kilometre taşları ve bu alandaki öncü isimlerin katkıları irdelenir. Kitap, yapay zekanın temel kavramlarını ve teorilerini anlaşılır bir dille sunarken, aynı zamanda derin öğrenme, makine öğrenimi, sinir ağları, ve doğal dil işleme gibi konulara da detaylı bir giriş yapar. Okuyucular, yapay zekanın karmaşık dünyasına dair kapsamlı bir bakış açısı kazanırken, bu teknolojinin insanlık için barındırdığı umutları ve riskleri de değerlendirme fırsatı bulacaklar.",
+  "price": 29.99,
+  "stock": 150,
+  "publishdate": "2024-01-15",
+  "categories": ["Teknoloji", "Bilim"],
+  "author": {
+    "firstname": "Ahmet",
+    "lastname": "Kaya"
+  }
+}

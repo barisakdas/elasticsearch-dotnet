@@ -23,7 +23,7 @@ public class Book : BaseEntity
     /* NESTED ENTITIES */
 
     /// <summary>Kitabın yazar bilgisi.</summary>
-    [JsonPropertyName("authors")]
+    [JsonPropertyName("author")]
     public Author Author { get; set; } = null!;
 
     /// <summary>İstenilen değererli alan ve kalanını kullanmayan bir genel yapıcı metot.</summary>

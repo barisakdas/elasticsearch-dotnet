@@ -1,0 +1,6 @@
+PUT /authors/_doc/5
+{
+  "firstname": "Murat",
+  "lastname": "Öztürk",
+  "birth-date": "1980-12-12"
+}

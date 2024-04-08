@@ -1,0 +1,13 @@
+POST /books/_doc/4
+{
+  "title": "Mikrobiyom ve Sağlık",
+  "abstract": "İnsan mikrobiyomu, sağlığımız üzerinde büyük bir etkiye sahiptir. Bu kitap, mikrobiyomun işlevlerini, sağlıkla olan ilişkisini ve hastalıkların tedavisindeki rolünü incelemektedir. Mikrobiyom, vücudumuzdaki trilyonlarca mikroorganizmanın genel adıdır ve bu mikroorganizmalar, özellikle bağırsaklarımızda yaşarlar. Sağlığımız üzerindeki etkileri son derece çeşitlidir; sindirimden bağışıklık sistemine, hatta ruh halimizi ve davranışlarımızı etkileyebilir. Bu kitapta, mikrobiyomun insan sağlığı üzerindeki etkileri, probiyotikler ve prebiyotikler gibi mikrobiyomu destekleyici gıdalar ve mikrobiyomun hastalıkların önlenmesi ve tedavisindeki potansiyeli ele alınmaktadır. Ayrıca, mikrobiyomun genetik yapısı, çeşitliliği ve ekosistemi hakkında da bilgi verilmekte, modern yaşamın mikrobiyom üzerindeki etkileri tartışılmaktadır. Kitap, mikrobiyom araştırmalarının son bulgularını sunmakta ve bu bilgilerin nasıl pratik uygulamalara dönüştürülebileceğini örneklerle açıklamaktadır. Okuyucular, mikrobiyomun karmaşık dünyasını keşfederken, sağlıklı bir mikrobiyomu korumanın ve hastalıklarla mücadelede mikrobiyomun rolünün önemini anlayacaklardır.",
+  "price": 25.75,
+  "stock": 120,
+  "publishdate": "2024-04-05",
+  "categories": ["Biyoloji", "Tıp"],
+  "author": {
+    "firstname": "Zeynep",
+    "lastname": "Çelik"
+  }
+}

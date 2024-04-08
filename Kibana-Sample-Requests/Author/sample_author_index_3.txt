@@ -1,0 +1,6 @@
+PUT /authors/_doc/3
+{
+  "firstname": "Kemal",
+  "lastname": "Yýldýrým",
+  "birth-date": "1992-11-30"
+}

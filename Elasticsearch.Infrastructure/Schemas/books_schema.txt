@@ -1,29 +1,50 @@
-PUT books
+PUT /books
 {
   "mappings": {
     "properties": {
-      "title":{
-        "type": "text", 
+      "title": {
+        "type": "text",
         "fields": {
-          "keyword":{
-            "type":"keyword"
+          "keyword": {
+            "type": "keyword"
           }
         }
       },
-      "absract":{
+      "abstract": {
         "type": "text"
       },
-      "stock":{
-        "type": "double"
+      "price": {
+        "type": "scaled_float",
+        "scaling_factor": 100
       },
-      "price":{
-        "type": "double"
+      "stock": {
+        "type": "integer"
       },
-      "publishdate":{
+      "publishdate": {
         "type": "date"
       },
-      "categories":{
+      "categories": {
         "type": "keyword"
+      },
+      "authors": {
+        "properties": {
+          "firstname": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "lastname": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -1,0 +1,22 @@
+﻿Belirli Bir Yazar Tarafından Yazılmış ve Belirli Bir Fiyat Aralığındaki Makaleleri Arama:
+
+GET /articles/_search
+{
+  "query": {
+    "bool": {
+      "must": {
+        "match": {
+          "author.lastname": "Yıldırım"
+        }
+      },
+      "filter": {
+        "range": {
+          "price": {
+            "gte": 30,
+            "lte": 60
+          }
+        }
+      }
+    }
+  }
+}

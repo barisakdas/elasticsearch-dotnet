@@ -1,0 +1,6 @@
+PUT /authors/_doc/4
+{
+  "firstname": "Zeynep",
+  "lastname": "Çelik",
+  "birth-date": "1975-09-05"
+}

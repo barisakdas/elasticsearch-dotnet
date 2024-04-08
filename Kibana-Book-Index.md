@@ -1,0 +1,1 @@
+# Book Modeli İçin Kibana Üzerinde Örnek İndex İşlemleri

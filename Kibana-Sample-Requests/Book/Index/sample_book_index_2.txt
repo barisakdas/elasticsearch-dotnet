@@ -1,0 +1,13 @@
+POST /books/_doc/2
+{
+  "title": "Büyük Veri Analitiği",
+  "abstract": "Büyük veri analitiği, iş dünyasında ve bilimsel araştırmalarda devrim yaratmaktadır. Bu kitap, büyük veri kavramını, analitik tekniklerini ve bu tekniklerin çeşitli sektörlerde nasıl kullanıldığını ele alır. Veri setlerinin boyutu ve karmaşıklığı arttıkça, geleneksel veri işleme uygulamaları yetersiz kalmaktadır. Bu nedenle, büyük veri analitiği, veri bilimciler ve analistler için vazgeçilmez bir araç haline gelmiştir. Kitapta, büyük veri analitiğinin temel prensipleri, veri madenciliği, makine öğrenimi ve istatistiksel analiz gibi konular detaylı bir şekilde incelenmektedir. Ayrıca, büyük veri teknolojilerinin iş zekası, pazar araştırması, sosyal medya analizi ve sağlık bilimleri gibi alanlarda nasıl uygulandığına dair gerçek dünya örnekleri sunulmaktadır. Okuyucular, büyük veri analitiğinin günlük karar verme süreçlerine nasıl entegre edilebileceğini ve stratejik avantajlar sağlamak için nasıl kullanılabileceğini öğrenecekler. Kitap, büyük veri analitiğinin etik ve gizlilikle ilgili sorunlarına da değinmekte ve veri güvenliği konusunda farkındalık yaratmayı amaçlamaktadır. Son olarak, büyük veri analitiğinin geleceği ve bu alandaki potansiyel gelişmeler üzerine öngörülerde bulunarak, okuyucuları bu heyecan verici ve hızla gelişen alan hakkında bilgilendirmektedir.",
+  "price": 34.50,
+  "stock": 200,
+  "publishdate": "2024-02-20",
+  "categories": ["İş Dünyası", "Bilgisayar Bilimi"],
+  "author": {
+    "firstname": "Merve",
+    "lastname": "Aslan"
+  }
+}

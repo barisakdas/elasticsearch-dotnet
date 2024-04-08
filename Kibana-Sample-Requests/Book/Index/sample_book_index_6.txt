@@ -1,0 +1,13 @@
+POST /books/_doc/6
+{
+  "title": "Robotik ve Otomasyon",
+  "abstract": "Robotik, endüstriyel otomasyonun ön saflarında yer almaktadır. Bu kitap, robot teknolojilerinin gelişimini, endüstrideki uygulamalarını ve toplum üzerindeki etkilerini araştırır. Robotlar, üretimden sağlık hizmetlerine, ev kullanımından keşif faaliyetlerine kadar geniş bir yelpazede kullanılmaktadır. Bu kitapta, robotların tasarımından yapay zeka ile entegrasyonuna, karmaşık sistemlerin yönetiminden insansız araçlara kadar robot teknolojisinin her yönü ele alınmaktadır. Endüstri 4.0’ın yükselişiyle birlikte, robotlar artık sadece tekrar eden görevleri yerine getirmekle kalmıyor, aynı zamanda öğrenme ve karar verme yetenekleri sayesinde daha karmaşık işleri de üstleniyor. Kitap, bu gelişmelerin iş gücü piyasası, ekonomi ve toplum üzerindeki potansiyel etkilerini incelerken, robotların gelecekteki işlerimizi nasıl dönüştürebileceğini de tartışmaktadır. Ayrıca, robotik teknolojilerin etik ve yasal boyutlarına da değinilmekte, otomasyonun insan hakları ve iş güvenliği üzerindeki etkileri sorgulanmaktadır. Kitap, robotların insanlarla etkileşimini ve bu etkileşimin sosyal normlar ve ilişkiler üzerindeki etkilerini de incelemektedir. Son olarak, robotik alanındaki en son araştırmalar, yenilikler ve bu teknolojinin geleceği hakkında bilgiler sunarak, okuyucuları bu hızla gelişen ve dönüşen alanda güncel tutmayı hedeflemektedir. Robotik teknolojilerin sürdürülebilir kalkınma ve insan yaşamının iyileştirilmesine nasıl katkıda bulunabileceği üzerine öngörülerde bulunulmaktadır.",
+  "price": 45.00,
+  "stock": 100,
+  "publishdate": "2024-06-25",
+  "categories": ["Mühendislik", "Teknoloji"],
+  "author": {
+    "firstname": "Selin",
+    "lastname": "Demir"
+  }
+}

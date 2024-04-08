@@ -1,0 +1,13 @@
+POST /books/_doc/5
+{
+  "title": "Sürdürülebilir Enerji Sistemleri",
+  "abstract": "Sürdürülebilir enerji, gezegenimizin geleceği için kritik öneme sahiptir. Bu çalışma, yenilenebilir enerji kaynaklarını, enerji sistemlerinin dönüşümünü ve çevresel etkilerini ele alır. Yenilenebilir enerji kaynakları, fosil yakıtların yerini alarak çevresel ayak izimizi azaltma ve iklim değişikliğiyle mücadelede önemli bir rol oynar. Güneş, rüzgar, hidroelektrik ve biyokütle gibi kaynaklardan elde edilen enerji, sürdürülebilir bir gelecek için temiz ve yenilenebilir alternatifler sunar. Bu kitapta, sürdürülebilir enerji sistemlerinin tasarımı, uygulanması ve yönetimi üzerine kapsamlı bilgiler verilmekte ve bu sistemlerin ekonomik ve politik yönleri tartışılmaktadır. Ayrıca, yenilenebilir enerji teknolojilerinin gelişimi, mevcut durumu ve gelecekteki trendleri incelenmekte, bu teknolojilerin toplum üzerindeki sosyoekonomik etkileri değerlendirilmektedir. Okuyucular, enerji verimliliği ve enerji tasarrufu konularında bilinçlendirilirken, sürdürülebilir enerji kaynaklarının kullanımının yaygınlaştırılması için gerekli politika ve düzenlemeler hakkında bilgi sahibi olacaklar. Kitap, aynı zamanda, sürdürülebilir enerji sistemlerinin çevresel etkilerini azaltma ve doğal kaynakları koruma yönündeki stratejileri de sunmaktadır. Son olarak, okuyuculara, sürdürülebilir enerji kaynaklarının entegrasyonu ve bu kaynaklardan maksimum fayda sağlama yolları hakkında pratik öneriler ve çözüm yolları sunulmaktadır. Bu eser, sürdürülebilir enerjinin önemini vurgularken, okuyucuları bu alandaki yenilikler ve gelişmeler konusunda güncel tutmayı amaçlamaktadır.",
+  "price": 37.00,
+  "stock": 60,
+  "publishdate": "2024-05-15",
+  "categories": ["Çevre Bilimi", "Mühendislik"],
+  "author": {
+    "firstname": "Murat",
+    "lastname": "Öztürk"
+  }
+}

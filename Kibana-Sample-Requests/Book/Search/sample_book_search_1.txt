@@ -1,0 +1,21 @@
+﻿Belirli Bir Tarihten Sonra Yayınlanmış ve Belirli Kategorilerdeki Makaleleri Arama:
+
+GET /articles/_search
+{
+  "query": {
+    "bool": {
+      "must": {
+        "range": {
+          "publishdate": {
+            "gte": "2024-01-01"
+          }
+        }
+      },
+      "filter": {
+        "terms": {
+          "categories.keyword": ["Teknoloji", "Bilim"]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+﻿PUT /authors/_doc/1
+{
+  "firstname": "Ahmet",
+  "lastname": "Kaya",
+  "birth-date": "1970-01-01"
+}

@@ -41,3 +41,13 @@ Yaml dosyası üzerinde bu bilgilerin değiştirilmesi durumunda uygulamanın ap
 Not: Bu json bloğundan alınan veriler `Options Pattern` kullanılarak Core katmanında Config içerisinde oluşturulan bir sınıfa aktarılmış ve proje içerisinde oradan kullanılmıştır.
 
 Docker compose dosyasının bulunduğu dizinde açılacak bir terminalde `docker-compose up` komutunu çalıştırarak Elasticsearch ve Kibana konteynırlarının ayağa kalkmasını sağlayabilirsiniz. Bu işlemden sonra projeyi localhost üzerinde çalıştırabilir ve kullanabilirsiniz.
+
+## Proje Ön Hazırlık
+Projenin daha aktif kullanılabilmesi için veritabanı üzerine bazı verilerin eklebilmesini sağlayan `Kibana-Sample-Requests\Book\Index` içerisinde örnek dataları ekleyeceğimiz Kibana sorgu diline uygun komutlar hazırlanmıştır. Bu komutları Kibana içerisindeki `/app/dev_tools#/console` path'i üzerindeki Dev Tools alanında çalıştırıldığında elasticsearch veritabanına veriler eklenmiş olacaktır.
+
+Daha sonra bu verileri nasıl alacağımızı gösteren karmaşık sorgu örnekleri ise `Kibana-Sample-Requests\Book\Search` klasörü içerisinde verilmiştir. Buradaki örneklerin bazıları bilerek veri geri getirmeyecek olarak hazırlanmıştır.
+
+Kibanadan tüm verileri alabilmemiz için `GET {index_name}/_search` komutunu yine Dev Tools içerisinde çalıştırmamız yeterli olacaktır. BaseRepository içerisinde olan her bir metodun Kibana üzerinde bir karşılığı oluşturabileceğini unutmamak gerekir.
+
+İlgilenen arkadaşlara şimdiden kolaylıklar diliyorum.
+Projemize yıldır vererek destek olabilirsiniz.
