@@ -8,7 +8,7 @@ public class Author : BaseEntity
     [JsonPropertyName("lastname")]
     public string LastName { get; set; } = null!;
 
-    [JsonPropertyName("birdthdata")]
+    [JsonPropertyName("birdth-date")]
     public DateTime BirthDate { get; set; }
 
     /* NESTED ENTITIES */

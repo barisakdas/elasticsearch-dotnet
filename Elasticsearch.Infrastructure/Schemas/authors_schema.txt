@@ -18,7 +18,7 @@ PUT authors
           }
         }
       },
-      "birthdate":{
+      "birth-date":{
         "type": "date"
       }
     }
