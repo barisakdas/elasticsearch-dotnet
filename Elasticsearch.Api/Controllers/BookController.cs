@@ -54,7 +54,7 @@ public class BookController : ControllerBase
     }
 
     [HttpGet("getbypublishdate")]
-    public async Task<IActionResult> GetByNameAsync(DateTime publishDate)
+    public async Task<IActionResult> GetByPublishDateAsync(DateTime publishDate)
     {
         // Servis üzerinden veriyi alıyoruz. Alınan bu veri bize Result<T> şeklinde döneceği için bunun yapılandırmasına ihtiyacımız var.
         var result = await _service.GetByPublishDateAsync(publishDate);
