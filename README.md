@@ -24,3 +24,18 @@ Core katmanında aşağıdaki kütüphaneler kullanılmıştır.
 
 ## Projenin Amacı
 Proje Elasticsearch kullanımına yeni başlayanların client üzerinden gelen istekleri Elasticsearch üzerinde işlemeyi göstermek ve örnek yapılar oluşturmaktır. Bu metotların her birinin örneklemeleri olmasa bile `BaseRepository` içerisinde detaylı açıklamalar barındırmaktadır. Bu sayede hangi metot ne için kullanılacak, hangi parametreler ne amaca hizmet etmektedir detaylo dökümanları kod üzerinde mevcuttur.
+
+## Projenin kullanımı
+Projenin kullanımı için bir elasticsearch veritabanına ihtiyacınız bulunmaktadır. Localhost üzerine kurulum yapmanızı sağlayan `docker-compose.yaml` dosyası proje içerisinde tüm ayarları ile mevcuttur. Bir elasticsearch container oluştururken en çok dikkat etmemiz gereken key bağlantıyı sağlayacak credential bilgileridir.
+Yaml dosyası üzerinde bu bilgilerin değiştirilmesi durumunda uygulamanın api katmanıdan bulunan `appsettings.Development.json` dosyasında ilgili alanda da değişiklik yapılmalıdır.
+
+```json
+// Elasticsearch üzerine bağlanmamızı sağlayacak ayarlar.
+"Elasticsearch": {
+  "Url": "http://localhost:9200", // Ulaşacağımız Elasticsearch adresi.
+  "Client": "elastic", // Kullanıcı adı.
+  "Secret": "changeme" // Parola.
+}
+```
+
+Docker compose dosyasının bulunduğu dizinde açılacak bir terminalde `docker-compose up` komutunu çalıştırarak Elasticsearch ve Kibana konteynırlarının ayağa kalkmasını sağlayabilirsiniz. Bu işlemden sonra projeyi localhost üzerinde çalıştırabilir ve kullanabilirsiniz.
