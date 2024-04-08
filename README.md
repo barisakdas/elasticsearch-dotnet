@@ -38,4 +38,6 @@ Yaml dosyası üzerinde bu bilgilerin değiştirilmesi durumunda uygulamanın ap
 }
 ```
 
+Not: Bu json bloğundan alınan veriler `Options Pattern` kullanılarak Core katmanında Config içerisinde oluşturulan bir sınıfa aktarılmış ve proje içerisinde oradan kullanılmıştır.
+
 Docker compose dosyasının bulunduğu dizinde açılacak bir terminalde `docker-compose up` komutunu çalıştırarak Elasticsearch ve Kibana konteynırlarının ayağa kalkmasını sağlayabilirsiniz. Bu işlemden sonra projeyi localhost üzerinde çalıştırabilir ve kullanabilirsiniz.
