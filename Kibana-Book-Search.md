@@ -91,4 +91,22 @@ Sonuçları belirli bir alan göre sıralamak için sort parametresini kullanabi
 }
 ```
 
+7. Fuziness
+Bir arama sırasında kelimeler içerisindeki bazı karakterler yanlış olarak yazılsa bile bunu anlayıp getirebilmek için:
+
+`GET /books/_search`
+```json
+{
+  "query": {
+    "match": {
+      "title": {
+        "query": "Büyük Veri Analitiki",
+        "fuzziness": 2
+      }
+    }
+  }
+}
+```
+Bu sorgu, “title” alanında “Büyük Veri Analitiği” ifadesine benzer kelimeleri arar ve en fazla iki karakter farklılığı olan sonuçları döndürür. Örneğin, “Büyük Veri Analitigi” veya “Buyuk Veri Analitiği” gibi yazım hataları olan başlıkları da bulabilirsiniz. fuzziness değeri olarak 2 kullanmak, arama terimi ile eşleşen terimler arasında en fazla iki karakter değişikliği (ekleme, çıkarma veya değiştirme) olabileceği anlamına gelir. Bu, kullanıcıların hatalı yazımlarını düzeltebilir ve arama sonuçlarını genişletebilir.
+
 Bu rehber, Book modeli için Kibana üzerinde temel arama işlemlerini nasıl yapabileceğinizi göstermektedir. İhtiyacınıza göre bu sorguları özelleştirebilir ve genişletebilirsiniz. Her bir sorgu, farklı senaryolarda kullanılmak üzere tasarlanmıştır.
