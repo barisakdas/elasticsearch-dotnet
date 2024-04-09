@@ -17,7 +17,7 @@ public class BaseRepository<T> : RepositoryInterfaces.BaseRepositoryInterfaces.I
     // sorgu oluşturma için Fluent API ve belge indeksleme gibi ortak görevler için yardımcılar sunar1.
     // .NET 8’in kendine has özellikleri arasında performans iyileştirmeleri, çöp toplama ve çekirdek ile uzantı kitaplıklarına yönelik geliştirmeler bulunmaktadır.
     // Ayrıca, mobil uygulamalar ve yeni kaynak oluşturucular için com birlikte çalışma ve yapılandırma bağlaması gibi yeni özellikler içerir
-    private readonly ElasticsearchClient _client;
+    internal readonly ElasticsearchClient _client;
 
     public BaseRepository(ElasticsearchClient client)
         => _client = client;

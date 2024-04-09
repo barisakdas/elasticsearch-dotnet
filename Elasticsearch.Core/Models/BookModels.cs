@@ -23,6 +23,20 @@ public record UpdateBookModel
     public List<string> Categories { get; set; } = new();
 }
 
+/// <summary>Filtre alanında seçilecek özelliklere göre arama işlemini yapmamızı sağlayacak model.</summary>
+public record SearchBookModel
+{
+    public string? Title { get; set; } = null!;
+    public string? Abstract { get; set; } = null!;
+    public double? MinPrice { get; set; }
+    public uint? MinStock { get; set; }
+
+    [DataType(DataType.Date)]
+    public DateTime? PublishDateStart { get; set; }
+    public int Page { get; set; } = 1;
+    public int PageSize { get; set; } = 10;
+}
+
 // <note-tr>
 // Burada bir sınıfın oluşturulma ve güncellenmesi dışında kullanılacak tüm talep modellerinin tek bir .cs dosyasının içerisinde
 // oluşturulması yöntemini kullanıyoruz. Böylece .cs fazlalaşmamış oluyor ve klasör/dosya kalabalığının da önüne geçmiş oluyoruz.

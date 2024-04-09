@@ -14,6 +14,7 @@
 
 global using Elasticsearch.Core.Entities;
 global using Elasticsearch.Core.Entities.BaseEntites;
+global using Elasticsearch.Core.Models;
 global using Elasticsearch.Infrastructure.Repositories.BaseRepositories;
 global using Elasticsearch.Infrastructure.RepositoryInterfaces;
 

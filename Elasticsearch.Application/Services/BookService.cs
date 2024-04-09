@@ -24,6 +24,44 @@ public class BookService : IBookService
         return new SuccessfullResult<List<BookDto>>(response);
     }
 
+    /// <summary>Ekrandan gelen parametre ile Makalelerin `Title` ve `Abstract` alanlarında full text search araması yapmak istiyoruz.
+    /// Bunun için repositorymize özel olarak bir sorgu hazırladık. Bu sorgu makaleleri ararken elasticsearch veritabanının Full Text Search özelliğini kullanacak.
+    /// Arka planda(repository içinde) komplex ve birleşik bir sorgu yazacağız.</summary>
+    public async Task<BaseResult<List<BookDto>>> GetFilterAsync(string searchText)
+    {
+        // İlk olarak dışarıdan gelen modelin boş olup olmadığına bakıyoruz.
+        // Böylece gelen model boşşsa herhangi bir işlem yapmadan hızlıca metodu kırabiliriz.
+        if (string.IsNullOrWhiteSpace(searchText))
+            return new BadRequestResult<List<BookDto>>("Gelen id boş geçilemez!");
+
+        // Elasticsearch üzerindeki veriyi alıyoruz.
+        var (data, message) = await _repository.GetFilterAsync(IndexName, searchText);
+        if (data is null)
+            return new BadRequestResult<List<BookDto>>($"Veri alınırken hata ile karşılaşıldı: Hata: {message}");
+
+        var response = _mapper.Map<List<BookDto>>(data);
+
+        return new SuccessfullResult<List<BookDto>>(response);
+    }
+
+    /// <summary>Ekrandan gelen parametreler ile Makalelerin ilgili tüm alanlarında filtreleme yapmamızı sağlayacak olan metot..</summary>
+    public async Task<BaseResult<List<BookDto>>> GetFilterAsync(SearchBookModel model)
+    {
+        // İlk olarak dışarıdan gelen modelin boş olup olmadığına bakıyoruz.
+        // Böylece gelen model boşşsa herhangi bir işlem yapmadan hızlıca metodu kırabiliriz.
+        if (model is null)
+            return new BadRequestResult<List<BookDto>>("Gelen id boş geçilemez!");
+
+        // Elasticsearch üzerindeki veriyi alıyoruz.
+        var (data, message) = await _repository.GetFilterAsync(IndexName, model);
+        if (data is null)
+            return new BadRequestResult<List<BookDto>>($"Veri alınırken hata ile karşılaşıldı: Hata: {message}");
+
+        var response = _mapper.Map<List<BookDto>>(data);
+
+        return new SuccessfullResult<List<BookDto>>(response);
+    }
+
     /// <summary>Veri tabanında aktif olarak bulunan verilerin gerekli işlemleri yapılarak ön yüze gönderilmesini sağlayan metot.</summary>
     public async Task<BaseResult<BookDto>> GetByIdAsync(string id)
     {

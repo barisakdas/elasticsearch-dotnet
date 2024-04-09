@@ -23,6 +23,26 @@ public class BookController : ControllerBase
         return this.FromResult(result);
     }
 
+    [HttpGet("getfilter_with_searchtext")]
+    public async Task<IActionResult> GetFilterAsync(string searchText)
+    {
+        // Servis üzerinden veriyi alıyoruz. Alınan bu veri bize Result<T> şeklinde döneceği için bunun yapılandırmasına ihtiyacımız var.
+        var result = await _service.GetFilterAsync(searchText);
+
+        // Gelen verideki Result yapısının durumunu kontrol ederek ve ona uygun geri dönüş tipini (IActionResult) seçerek işlemi sonlandırıyoruz.
+        return this.FromResult(result);
+    }
+
+    [HttpPost("getfilter_with_model")]
+    public async Task<IActionResult> GetFilterAsync(SearchBookModel model)
+    {
+        // Servis üzerinden veriyi alıyoruz. Alınan bu veri bize Result<T> şeklinde döneceği için bunun yapılandırmasına ihtiyacımız var.
+        var result = await _service.GetFilterAsync(model);
+
+        // Gelen verideki Result yapısının durumunu kontrol ederek ve ona uygun geri dönüş tipini (IActionResult) seçerek işlemi sonlandırıyoruz.
+        return this.FromResult(result);
+    }
+
     [HttpGet("getbyid")]
     public async Task<IActionResult> GetByIdAsync(string id)
     {

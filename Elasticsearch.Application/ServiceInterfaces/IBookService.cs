@@ -5,8 +5,13 @@ public interface IBookService
     /// <summary>Veri tabanında aktif olarak bulunan verilerin gerekli işlemleri yapılarak ön yüze toplu şekilde gönderilmesini sağlayan metot.</summary>
     Task<BaseResult<List<BookDto>>> GetAllAsync();
 
-    /// <summary>Parametre olarak alınan veriyi hem Title hemde Abstact alanında Full Text search ve Term query ile arayarak getiren metot.</summary>
+    /// <summary>Ekrandan gelen parametre ile Makalelerin `Title` ve `Abstract` alanlarında full text search araması yapmak istiyoruz.
+    /// Bunun için repositorymize özel olarak bir sorgu hazırladık. Bu sorgu makaleleri ararken elasticsearch veritabanının Full Text Search özelliğini kullanacak.
+    /// Arka planda(repository içinde) komplex ve birleşik bir sorgu yazacağız.</summary>
     Task<BaseResult<List<BookDto>>> GetFilterAsync(string searchText);
+
+    /// <summary>Ekrandan gelen parametreler ile Makalelerin ilgili tüm alanlarında filtreleme yapmamızı sağlayacak olan metot..</summary>
+    Task<BaseResult<List<BookDto>>> GetFilterAsync(SearchBookModel model);
 
     /// <summary>Veri tabanında aktif olarak bulunan ve ilgili id ye ait veriyi getiren sağlayan metot.</summary>
     Task<BaseResult<BookDto>> GetByIdAsync(string id);
