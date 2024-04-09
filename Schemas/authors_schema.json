@@ -1,0 +1,25 @@
+{
+  "mappings": {
+    "properties": {
+      "firstname":{
+        "type": "text", 
+        "fields": {
+          "keyword":{
+            "type":"keyword"
+          }
+        }
+      },
+      "lastname":{
+        "type": "text", 
+        "fields": {
+          "keyword":{
+            "type":"keyword"
+          }
+        }
+      },
+      "birth-date":{
+        "type": "date"
+      }
+    }
+  }
+}
