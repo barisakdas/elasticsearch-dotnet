@@ -5,8 +5,7 @@
 /// BaseRepository<T> sınıfı, belirli bir veri türü (T) için CRUD (Oluştur, Oku, Güncelle, Sil) işlemlerini gerçekleştiren yöntemler sağlar.
 /// Bu, kod tekrarını azaltır ve veri erişim mantığını merkezileştirir.</summary>
 /// <typeparam name="T">Generic olarak alınan sınıf. Bu sınıf mutlaka BaseEntity'den kalıtım almak zoruda olmasa da BaseRepository tanımında o şekilde işaretlenmiştir.</typeparam>
-public class BaseRepository<T>(ElasticsearchClient _client)
-    : IRepository<T>
+public class BaseRepository<T> : IRepository<T>
      where T : BaseEntity
 {
     /****************************************************************** (NOTES) **********************************************************************************************/
@@ -21,6 +20,9 @@ public class BaseRepository<T>(ElasticsearchClient _client)
     // .NET 8’in kendine has özellikleri arasında performans iyileştirmeleri, çöp toplama ve çekirdek ile uzantı kitaplıklarına yönelik geliştirmeler bulunmaktadır.
     // Ayrıca, mobil uygulamalar ve yeni kaynak oluşturucular için com birlikte çalışma ve yapılandırma bağlaması gibi yeni özellikler içerir.
     /****************************************************************** (/NOTES) *********************************************************************************************/
+    protected readonly ElasticsearchClient _client;
+
+    public BaseRepository(ElasticsearchClient client) => _client = client;
 
     #region [STRUCTURED_QUERYS]
 
