@@ -1,14 +1,9 @@
 ﻿namespace Elasticsearch.Application.Services;
 
-public class BookService : IBookService
+public class BookService(IBookRepository _repository, IMapper _mapper)
+    : IBookService
 {
-    private readonly IBookRepository _repository;
-    private readonly IMapper _mapper;
-
     private const string IndexName = "books";
-
-    public BookService(IBookRepository repository, IMapper mapper)
-       => (_repository, _mapper) = (repository, mapper);
 
     /// <summary>Veri tabanında aktif olarak bulunan verilerin gerekli işlemleri yapılarak ön yüze toplu şekilde gönderilmesini sağlayan metot.</summary>
     public async Task<BaseResult<List<BookDto>>> GetAllAsync()

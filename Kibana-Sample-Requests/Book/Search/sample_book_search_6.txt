@@ -1,6 +1,6 @@
 ﻿Belirli Bir Kelimeyi İçeren ve Belirli Bir Stok Miktarından Fazla Olan Makaleleri Arama:
 
-GET /articles/_search
+GET /books/_search
 {
   "query": {
     "bool": {

@@ -1,6 +1,6 @@
 ﻿Stok Miktarına Göre Sıralama ve Belirli Bir Kelimeyi İçeren Makaleleri Arama:
 
-GET /articles/_search
+GET /books/_search
 {
   "query": {
     "match": {

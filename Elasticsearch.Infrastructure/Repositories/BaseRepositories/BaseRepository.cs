@@ -5,9 +5,12 @@
 /// BaseRepository<T> sınıfı, belirli bir veri türü (T) için CRUD (Oluştur, Oku, Güncelle, Sil) işlemlerini gerçekleştiren yöntemler sağlar.
 /// Bu, kod tekrarını azaltır ve veri erişim mantığını merkezileştirir.</summary>
 /// <typeparam name="T">Generic olarak alınan sınıf. Bu sınıf mutlaka BaseEntity'den kalıtım almak zoruda olmasa da BaseRepository tanımında o şekilde işaretlenmiştir.</typeparam>
-public class BaseRepository<T> : RepositoryInterfaces.BaseRepositoryInterfaces.IRepository<T>
+public class BaseRepository<T>(ElasticsearchClient _client)
+    : IRepository<T>
      where T : BaseEntity
 {
+    /****************************************************************** (NOTES) **********************************************************************************************/
+
     // ElasticsearchClient, Elasticsearch veritabanıyla etkileşim kurmak için kullanılan .NET tabanlı bir kütüphanedir.
     // Elasticsearch, büyük veri setlerini hızlı bir şekilde aramak ve analiz etmek için kullanılan popüler bir açık kaynak arama motorudur.
     // ElasticsearchClient, bu işlevselliği .NET uygulamalarınıza entegre etmenizi sağlar. Örneğin, belgeleri indeksleme, arama sorguları oluşturma,
@@ -16,11 +19,8 @@ public class BaseRepository<T> : RepositoryInterfaces.BaseRepositoryInterfaces.I
     // kullanılmak üzere NuGet paketi olarak mevcuttur. Bu kütüphane, REST API ile birebir eşleme, Elasticsearch API’leri için güçlü tip denetimi,
     // sorgu oluşturma için Fluent API ve belge indeksleme gibi ortak görevler için yardımcılar sunar1.
     // .NET 8’in kendine has özellikleri arasında performans iyileştirmeleri, çöp toplama ve çekirdek ile uzantı kitaplıklarına yönelik geliştirmeler bulunmaktadır.
-    // Ayrıca, mobil uygulamalar ve yeni kaynak oluşturucular için com birlikte çalışma ve yapılandırma bağlaması gibi yeni özellikler içerir
-    internal readonly ElasticsearchClient _client;
-
-    public BaseRepository(ElasticsearchClient client)
-        => _client = client;
+    // Ayrıca, mobil uygulamalar ve yeni kaynak oluşturucular için com birlikte çalışma ve yapılandırma bağlaması gibi yeni özellikler içerir.
+    /****************************************************************** (/NOTES) *********************************************************************************************/
 
     #region [STRUCTURED_QUERYS]
 

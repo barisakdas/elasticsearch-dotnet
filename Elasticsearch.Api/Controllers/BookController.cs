@@ -1,18 +1,13 @@
 ﻿namespace Elasticsearch.Api.Controllers;
 
-/// <summary>Endpoinleri oluşturduğumuz yapı.</summary>
+/// <summary>Endpoinleri oluşturduğumuz yapı.
+/// İlgili servisi içeriye alıyoruz.
+/// Servisi DI container içerisinde dahil ediyoruz.</summary>
 [Produces("application/json")]
 [Route("v1/[controller]")]
 [ApiController]
-public class BookController : ControllerBase
+public class BookController(IBookService _service) : ControllerBase
 {
-    // İlgili servisi içeriye alıyoruz.
-    private readonly IBookService _service;
-
-    // Servisi DI container içerisinde dahil ediyoruz.
-    public BookController(IBookService service)
-       => _service = service;
-
     [HttpGet("getall")] // Yapılan işlemin endpointinin nasıl görüneceğini burada `getall` diyerek belirtiyoruz.
     public async Task<IActionResult> GetAllAsync()
     {

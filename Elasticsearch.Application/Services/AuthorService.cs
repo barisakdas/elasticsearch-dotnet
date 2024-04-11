@@ -1,14 +1,9 @@
 ﻿namespace Elasticsearch.Application.Services;
 
-public class AuthorService : IAuthorService
+public class AuthorService(IAuthorRepository _repository, IMapper _mapper)
+    : IAuthorService
 {
-    private readonly IAuthorRepository _repository;
-    private readonly IMapper _mapper;
-
     private const string IndexName = "authors";
-
-    public AuthorService(IAuthorRepository repository, IMapper mapper)
-       => (_repository, _mapper) = (repository, mapper);
 
     /// <summary>Veri tabanında aktif olarak bulunan verilerin gerekli işlemleri yapılarak ön yüze toplu şekilde gönderilmesini sağlayan metot.</summary>
     public async Task<BaseResult<List<AuthorDto>>> GetAllAsync()

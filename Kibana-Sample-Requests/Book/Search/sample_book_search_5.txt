@@ -1,6 +1,6 @@
 ﻿Belirli Bir Yazar Tarafından Yazılmış ve Belirli Bir Fiyat Aralığındaki Makaleleri Arama:
 
-GET /articles/_search
+GET /books/_search
 {
   "query": {
     "bool": {

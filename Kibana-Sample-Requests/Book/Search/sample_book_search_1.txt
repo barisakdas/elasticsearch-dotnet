@@ -1,6 +1,6 @@
 ﻿Belirli Bir Tarihten Sonra Yayınlanmış ve Belirli Kategorilerdeki Makaleleri Arama:
 
-GET /articles/_search
+GET /books/_search
 {
   "query": {
     "bool": {

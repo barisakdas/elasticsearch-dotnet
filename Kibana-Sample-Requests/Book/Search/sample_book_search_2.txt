@@ -1,6 +1,6 @@
 ﻿Birden Fazla Yazarın İsimlerine Göre Makaleleri Arama ve Belirli Bir Fiyat Aralığında Filtreleme:
 
-GET /articles/_search
+GET /books/_search
 {
   "query": {
     "bool": {
